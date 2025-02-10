@@ -1,0 +1,27 @@
+.mainframe
+{
+    width: 300px;
+    height: 400px;
+    border: solid 1px beige;
+    border-radius: 1%;
+    background-color: beige;
+    box-shadow: 5px 5px gray;
+    text-align: center;
+}
+
+.title
+{
+    text-align: center;
+    border: solid 1px cadetblue;
+    border-radius: 1%;
+    background-color: cadetblue;
+}
+
+.message
+{
+    padding: 30% 10% 20% 10%;
+}
+.point
+{
+    padding: 10% 10% 20% 10%;
+}

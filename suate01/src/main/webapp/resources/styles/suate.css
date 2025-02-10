@@ -1,0 +1,90 @@
+.mainframe
+{
+    width: 400px;
+    height: 700px;
+    border: solid 1px beige;
+    border-radius: 1%;
+    background-color: beige;
+    box-shadow: 5px 5px gray;
+}
+
+.title
+{
+    text-align: center;
+    border: solid 1px cadetblue;
+    border-radius: 1%;
+    background-color: cadetblue;
+}
+
+.currentPoint
+{
+    padding-right: 5%;
+    width: relative;
+    height: 50px;
+    text-align: right;
+}
+
+.message
+{
+	margin: 10% 5% 5% 5%;
+	padding: 5% 10% 5% 10%;
+	text-align:center;
+	border: dashed 1px;
+}
+
+.secretNum
+{
+    padding-left: 5%;
+    width: relative;
+    height: 50px;
+    text-align: left;
+}
+
+.inputNum
+{
+    padding-left: 5%;
+    width: relative;
+    height: 50px;
+    text-align: left;
+}
+
+.inputNum #first,
+.inputNum #second,
+.inputNum #third
+{
+    width: 20px;
+}
+
+.inputRecord
+{
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 400px;
+}
+
+table
+{
+    width: 90%;
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+th, td
+{
+	border-collapse: collapse;
+    text-align: center;
+	border: 1px solid #000;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox  */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

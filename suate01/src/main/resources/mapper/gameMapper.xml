@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Game">    
+    <select id="findGameRecord" parameterType="int" resultType="game">
+    	select * from game_info where user_id=#{user_id}
+    </select>
+    
+<!--     <select id="findGamePoint" parameterType="int" resultType="int">
+        select user_point from user_info where user_id=#{user_id}
+    </select>
+    <select id="findGameAvailability" parameterType="int" resultType="int">
+        select game_availability from "game_info" where user_id=#{user_id}
+    </select> -->
+    
+    <insert id="insertGameRecord" parameterType="game">
+    	insert into game_info (user_id, user_point, user_input_num, game_secret_num, game_result) values(#{user_id}, #{user_point}, #{user_input_num}, #{game_secret_num}, #{game_result})
+    </insert>
+    
+    <update id="updateGameRecord" parameterType="map">
+    update game_info
+    set user_input_num = CONCAT(user_input_num, #{user_input_num}),
+        game_result = CONCAT(game_result, #{game_result}),
+        game_no = game_no + 1
+    where user_id = #{user_id}
+    </update>
+    
+    <update id="resetGameRecord" parameterType="map">
+    update game_info
+    set game_secret_num = #{game_secret_num},
+        user_play_date = CURRENT_TIMESTAMP
+    where user_id = #{user_id}
+    </update>
+    
+    <delete id="endGameRecord" parameterType="map">
+    update game_info
+    set user_point = user_point + #{user_point},
+    	game_end = 0
+    where user_id = #{user_id}
+    </delete>
+    
+</mapper>
